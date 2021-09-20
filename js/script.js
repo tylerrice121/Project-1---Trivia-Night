@@ -6,6 +6,8 @@ let $incorrectanswerB;
 let $incorrectanswerC;
 let gameData;
 let randomArray;
+let arrayQs;
+let arrayQFor;
 
 // grab html elements
 const $category = $('.category')
@@ -25,37 +27,49 @@ const play = function () {
 }
 
 const getData = function (event) {
-    $.ajax(`https://opentdb.com/api.php?amount=11&difficulty=easy`).then(function (data) {
-
+    $.ajax(`https://opentdb.com/api.php?amount=10&difficulty=easy`).then(function (data) {
+        
         gameData = data;
-
         console.log(gameData)
+        
+        
+        //create questions array
+        arrayQs = gameData.results
+        console.log(arrayQs)
+        // for(let i =0; i < arrayQs.length; i++){
+        //     console.log(i)
+        //     arrayQFor = i
+        // }
+
+        // console.log(arrayQFor)
+        while(arrayQs == arrayQs){
+            arrayQs += arrayQs
+    
+        }
+
         randomizer()
         result()
-
-
+        
+        
         if (gameData.results[0].type == "multiple") {
             $('.t-f').remove()
             renderMult()
         } else {
+            $('.multiple-choice').remove()
             renderTf()
         }
     })
 }
 
-const collectQs = function(){
 
 
-
-
-}
 
 
 const randomizer = function () {
-    $correctanswer = gameData.results[0].correct_answer
-    $incorrectanswerA = gameData.results[0].incorrect_answers[0]
-    $incorrectanswerB = gameData.results[0].incorrect_answers[1]
-    $incorrectanswerC = gameData.results[0].incorrect_answers[2]
+    $correctanswer = gameData.results[arrayQFor].correct_answer
+    $incorrectanswerA = gameData.results[arrayQFor].incorrect_answers[0]
+    $incorrectanswerB = gameData.results[arrayQFor].incorrect_answers[1]
+    $incorrectanswerC = gameData.results[arrayQFor].incorrect_answers[2]
 
     let answerArray = [$correctanswer, $incorrectanswerA, $incorrectanswerB, $incorrectanswerC]
 
@@ -77,8 +91,8 @@ const randomizer = function () {
 
 const renderMult = function () {
 
-    $category.html(gameData.results[0].category)
-    $question.html(gameData.results[0].question)
+    $category.html(gameData.results[arrayQFor].category)
+    $question.html(gameData.results[arrayQFor].question)
 
     $a.html(randomArray[0])
     $b.html(randomArray[1])
@@ -88,14 +102,14 @@ const renderMult = function () {
 
 const renderTf = function () {
 
-    $category.html(gameData.results[0].category)
-    $question.html(gameData.results[0].question)
+    $category.html(gameData.results[arrayQFor].category)
+    $question.html(gameData.results[arrayQFor].question)
 
 
-    if (gameData.results[0].correct_answer == "True") {
-        $t.html(gameData.results[0].correct_answer)
-    } else if (gameData.results[0].correct_answer !== "True") {
-        $t.html(gameData.results[0].incorrect_answers)
+    if (gameData.results[arrayQFor].correct_answer == "True") {
+        $t.html(gameData.results[arrayQFor].correct_answer)
+    } else if (gameData.results[arrayQFor].correct_answer !== "True") {
+        $t.html(gameData.results[arrayQFor].incorrect_answers)
     }
 }
 
@@ -115,7 +129,4 @@ const result = function () {
 
 play()
 
-$('.carousel.carousel-slider').carousel({
-    fullWidth: true,
-    indicators: true
-  });
+  M.AutoInit();
