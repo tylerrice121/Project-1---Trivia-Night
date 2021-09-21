@@ -53,6 +53,7 @@ div.section{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    margin-top: 100px;
     padding: 10%;
     height: 750px;
     width: 750px;

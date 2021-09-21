@@ -83,38 +83,75 @@ function render() {
                     </table>
                     <a class="waves-effect waves-light btn">Next Question</a>      
                 </div>
-            </div>    `
-                
+            </div>    `;
+            
         }
         
     })
     $('main').html(html);
 }
 
+
 function getResult() {
     $('.answer').on('click', function () {
+
+        let row1 = $(this).closest($('tbody')).children().closest($('#row1')).children().closest('#a').text()
+        let row2 = $(this).closest($('tbody')).children().closest($('#row2')).children().closest('#b').text()
+        let row3 = $(this).closest($('tbody')).children().closest($('#row3')).children().closest('#c').text()
+        let row4 = $(this).closest($('tbody')).children().closest($('#row4')).children().closest('#d').text()
+        
+
+        console.log(row1)
+
+        if(correctAnswerArray.includes(row1)){
+            $(this).closest($('tbody')).children().closest($('#row1')).css("background-color", "green")
+        } else {
+            $(this).closest($('tbody')).children().closest($('#row1')).css("background-color", "red")
+        }
+        if(correctAnswerArray.includes(row2)){
+            $(this).closest($('tbody')).children().closest($('#row2')).css("background-color", "green")
+        } else {
+            $(this).closest($('tbody')).children().closest($('#row2')).css("background-color", "red")
+        }
+        if(correctAnswerArray.includes(row3)){
+            $(this).closest($('tbody')).children().closest($('#row3')).css("background-color", "green")
+        } else {
+            $(this).closest($('tbody')).children().closest($('#row3')).css("background-color", "red")
+        }
+        if(correctAnswerArray.includes(row4)){
+            $(this).closest($('tbody')).children().closest($('#row4')).css("background-color", "green")
+        } else {
+            $(this).closest($('tbody')).children().closest($('#row4')).css("background-color", "red")
+        }
+
+
+        console.log($(this).closest($('tbody')).children().closest($('#row1')).text())
+
         if (correctAnswerArray.includes($(this).text())) {
+            $(this).closest($('tr')).css("background-color", "green")
             console.log('congrats')
+            console.log($(this).closest($('tr')))
             alert('congrats')
         } else {
+            $(this).closest($('section, tr')).css("background-color", "red")
             console.log('wrong')
             alert('wrong')
         }
     })
 }
 
-function scroll(){
-    $('a').on('click', 'button', function(){
-        let next = $(this).closest(".question1").next(),
-        section = $(this).closest('html')
+// function scroll(){
+//     $('a').on('click', 'button', function(){
+//         let next = $(this).closest(".question1").next(),
+//         section = $(this).closest('html')
 
-		section.animate({
-            scrollTop: $('html').scrollTop() + fuller.offset().top
+// 		section.animate({
+//             scrollTop: $('html').scrollTop() + fuller.offset().top
         
-        }, 700);
-})
-}
-scroll()
+//         }, 700);
+// })
+// }
+// scroll()
 
 play()
 
