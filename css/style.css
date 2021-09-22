@@ -11,18 +11,24 @@ html{
 body{
     display: flex;
     align-items: center;
-    justify-content: center;
+    flex-direction: column;
     margin: 0;
     padding: 0;
 }
-.header{
+.header, .end{
+    display: flex;
     width: 100vw;
-    position: fixed;
-    align-self: flex-start;
+    align-items: center;
+    justify-content: center;
     margin: 0;
     padding: 1rem;
     background: white;
     text-align: center;
+}
+
+.end{
+    height: 100vh;
+    flex-direction: column;
 }
 h2{
     padding: 0;
@@ -33,11 +39,11 @@ h2{
     color: white;
 }
 
-main.container{
-    border: 1px solid white;
+main{
+    border: 1px solid black;
     padding: 0;
     margin: 0;
-    height: 100vh;
+    flex-grow: 1;
 }
 
 div.section{
@@ -63,11 +69,15 @@ div.section{
     color: black;
 }
 
-.waves-effect{
+.waves-effect.answer-button-off{
     width: 100%;
     text-align: left;
-    /* background-color: blue; */
 }
+.waves-effect.answer-button-on{
+    width: 100%;
+    text-align: left;
+}
+
 .waves-effect.disabled.correct-answer{
     width: 100%;
     text-align: left;
@@ -75,3 +85,4 @@ div.section{
     padding-bottom: 55px;
     color: #80f5e9;
 }
+

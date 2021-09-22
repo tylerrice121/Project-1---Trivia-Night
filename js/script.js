@@ -195,7 +195,7 @@ console.log(html)
 
 function getResult() {
     //PG1
-        $('.0').on('click', '.waves-effect', function () {
+        $('.0').on('click', '.answer-button-on', function () {
         $('.0.answer-button-off').each(function(){
             $(this).show();
         })
@@ -205,7 +205,7 @@ function getResult() {
     })
 //
     //PG2
-        $('.1').on('click', '.waves-effect', function () {
+        $('.1').on('click', '.answer-button-on', function () {
 
         $('.1.answer-button-off').each(function(){
             $(this).show();
@@ -216,7 +216,7 @@ function getResult() {
     })
 //
     //PG3
-        $('.2').on('click', '.waves-effect', function () {
+        $('.2').on('click', '.answer-button-on', function () {
 
         $('.2.answer-button-off').each(function(){
             $(this).show();
@@ -227,7 +227,7 @@ function getResult() {
     })
 //
     //PG4
-        $('.3').on('click', '.waves-effect', function () {
+        $('.3').on('click', '.answer-button-on', function () {
 
         $('.3.answer-button-off').each(function(){
             $(this).show();
@@ -238,7 +238,7 @@ function getResult() {
     })
 //
     //PG5
-        $('.4').on('click', '.waves-effect', function () {
+        $('.4').on('click', '.answer-button-on', function () {
 
         $('.4.answer-button-off').each(function(){
             $(this).show();
@@ -249,7 +249,7 @@ function getResult() {
     })
 //
     //PG6
-        $('.5').on('click', '.waves-effect', function () {
+        $('.5').on('click', '.answer-button-on', function () {
 
         $('.5.answer-button-off').each(function(){
             $(this).show();
@@ -260,7 +260,7 @@ function getResult() {
     })
 //
     //PG7
-        $('.6').on('click', '.waves-effect', function () {
+        $('.6').on('click', '.answer-button-on', function () {
 
         $('.6.answer-button-off').each(function(){
             $(this).show();
@@ -271,7 +271,7 @@ function getResult() {
     })
 //
     //PG8
-        $('.7').on('click', '.waves-effect', function () {
+        $('.7').on('click', '.answer-button-on', function () {
 
         $('.7.answer-button-off').each(function(){
             $(this).show();
@@ -282,7 +282,7 @@ function getResult() {
     })
 //
     //PG9
-        $('.8').on('click', '.waves-effect', function () {
+        $('.8').on('click', '.answer-button-on', function () {
 
         $('.8.answer-button-off').each(function(){
             $(this).show();
@@ -293,7 +293,7 @@ function getResult() {
     })
 //
     //PG10
-        $('.9').on('click', '.waves-effect', function () {
+        $('.9').on('click', '.answer-button-on', function () {
 
         $('.9.answer-button-off').each(function(){
             $(this).show();
@@ -304,14 +304,13 @@ function getResult() {
     })
 //
     console.log(this)
-    $(document).on('click', '.waves-effect', function () {
+    $(document).on('click', '.answer-button-on', function () {
         if ($(this).hasClass('correct-answer')) {
             score = score + 1
             console.log('congrats')
             console.log($(this).closest($('tr')))
             alert('congrats')
         } else {
-            $(this).closest($('section, tr')).css("background-color", "red")
             console.log('wrong')
             alert('wrong')
         }
@@ -320,7 +319,14 @@ function getResult() {
 
     }
 
-
+function renderScore(){
+    $('.end h2').append(`<p>Your final score: ${score}/10</p>`)
+    
+    $('.end').on('click','.play-again',function() {
+        location.href=location.href;
+    });
+}
+renderScore()
 
 // console.log(randomArray)
 // function scroll(){
