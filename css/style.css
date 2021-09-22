@@ -57,13 +57,21 @@ div.section{
     padding: 10%;
     height: 750px;
     width: 750px;
-    background-color: blueviolet;
-    border: 2px solid white;
+    /* background-color: blueviolet; */
+    border: 2px solid black;
     box-sizing: border-box;
-    color: white;
+    color: black;
 }
 
 .waves-effect{
     width: 100%;
     text-align: left;
+    /* background-color: blue; */
+}
+.waves-effect.disabled.correct-answer{
+    width: 100%;
+    text-align: left;
+    border: 8px solid #2ABBAD;
+    padding-bottom: 55px;
+    color: #80f5e9;
 }

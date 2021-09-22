@@ -15,7 +15,7 @@ const play = function () {
 }
 
 const getData = function () {
-    $.ajax(`https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple`).then(function (data) {
+    $.ajax(`https://opentdb.com/api.php?amount=10&type=multiple`).then(function (data) {
 
         gameData = data;
 
@@ -68,7 +68,7 @@ function render() {
                             <table class="table table-hover" style="cursor:pointer">
                                 <tbody class="multiple-choice">
                                     <tr id="row1">
-                                        <a class="${index} waves-effect waves-light btn-large disabled answer-button-off" style="display: none" id="a">A) ${randomArray[0]}</a>
+                                        <a class="${index} waves-effect waves-light btn-large disabled correct-answer answer-button-off" style="display: none" id="a">A) ${randomArray[0]}</a>
                                         <a class="${index} waves-effect waves-light btn-large correct-answer answer-button-on" style="display: block" d="a">A) ${randomArray[0]}</a>
                                     </tr>
                                     <tr id="row2">
@@ -85,7 +85,7 @@ function render() {
                                     </tr>
                                 </tbody>
                             </table>
-                            <a class="waves-effect waves-light btn">Next Question</a>      
+                            <a class="waves-effect waves-light btn ${index}">Next Question</a>      
                         </div>
                     </div>`;                    
                 } else if (randomArray[1] === $correctanswer) {
@@ -104,7 +104,7 @@ function render() {
                                         <a class="${index} waves-effect waves-light btn-large answer-button-on" style="display: block" id="a">A) ${randomArray[0]}</a>
                                     </tr>
                                     <tr id="row2">
-                                        <a class="${index} waves-effect waves-light btn-large disabled answer-button-off" style="display: none" id="b">B) ${randomArray[1]}</a>
+                                        <a class="${index} waves-effect waves-light btn-large disabled correct-answer answer-button-off" style="display: none" id="b">B) ${randomArray[1]}</a>
                                         <a class="${index} waves-effect waves-light btn-large correct-answer answer-button-on" style="display: block" id="b">B) ${randomArray[1]}</a>
                                     </tr>
                                     <tr id="row3">
@@ -117,7 +117,7 @@ function render() {
                                     </tr>
                                 </tbody>
                             </table>
-                            <a class="waves-effect waves-light btn">Next Question</a>      
+                            <a class="waves-effect waves-light btn ${index}">Next Question</a>      
                         </div>
                     </div>`;
                 } else if (randomArray[2] === $correctanswer) {
@@ -140,7 +140,7 @@ function render() {
                                         <a class="${index} waves-effect waves-light btn-large answer-button-on" style="display: block" id="b">B) ${randomArray[1]}</a>
                                     </tr>
                                     <tr id="row3">
-                                        <a class="${index} waves-effect waves-light btn-large disabled answer-button-off" style="display: none" id="c">C) ${randomArray[2]}</a>
+                                        <a class="${index} waves-effect waves-light btn-large disabled correct-answer answer-button-off" style="display: none" id="c">C) ${randomArray[2]}</a>
                                         <a class="${index} waves-effect waves-light btn-large correct-answer answer-button-on" style="display: block" id="c">C) ${randomArray[2]}</a>
                                     </tr>
                                     <tr id="row4">
@@ -149,7 +149,7 @@ function render() {
                                     </tr>
                                 </tbody>
                             </table>
-                            <a class="waves-effect waves-light btn">Next Question</a>      
+                            <a class="waves-effect waves-light btn ${index}">Next Question</a>      
                         </div>
                     </div>`;
                 } else if (randomArray[3] === $correctanswer) {
@@ -176,12 +176,12 @@ function render() {
                                         <a class="${index} waves-effect waves-light btn-large answer-button-on" style="display: block" id="c">C) ${randomArray[2]}</a>
                                     </tr>
                                     <tr id="row4">
-                                        <a class="${index} waves-effect waves-light btn-large disabled answer-button-off" style="display: none" id="d">D) ${randomArray[3]}</a>
+                                        <a class="${index} waves-effect waves-light btn-large disabled correct-answer answer-button-off" style="display: none" id="d">D) ${randomArray[3]}</a>
                                         <a class="${index} waves-effect waves-light btn-large correct-answer answer-button-on" style="display: block" id="d">D) ${randomArray[3]}</a>
                                     </tr>
                                 </tbody>
                             </table>
-                            <a class="waves-effect waves-light btn">Next Question</a>      
+                            <a class="waves-effect waves-light btn ${index}">Next Question</a>      
                         </div>
                     </div>`;
                 }
