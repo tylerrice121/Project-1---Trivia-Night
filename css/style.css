@@ -2,21 +2,25 @@
     box-sizing: border-box;
 
 }
-html{
+
+html {
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    
 }
 
-body{
+body {
     display: flex;
     align-items: center;
     flex-direction: column;
     margin: 0;
     padding: 0;
+    background-image: linear-gradient(to right top, #ffecf7, #fef0fa, #fdf4fd, #fcf8fe, #fdfbff, #fdfcff, #fefeff, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff);
 }
-.header, .end{
+
+.header, .end {
     display: flex;
     width: 100vw;
     align-items: center;
@@ -27,50 +31,52 @@ body{
     text-align: center;
 }
 
-.header{
+.header {
     position: sticky;
     height: 100vh;
     flex-direction: column;
 }
-.begin{
+
+.begin {
     margin-top: 20px;
 }
 
-.trivia{
+.trivia {
     margin-bottom: 75px;
 }
 
-.next-button{
+.next-button {
     justify-self: flex-end;
 }
-.end{
+
+.end {
     height: 100vh;
     flex-direction: column;
 }
-h2{
+
+h2 {
     padding: 0;
     margin: 0;
 }
 
-.multiple-choice{
+.multiple-choice {
     color: white;
 }
 
-main{
-    /* border: 1px solid black; */
+main {
     padding: 0;
-
     margin: 0;
     flex-grow: 1;
 }
 
-div.section{
+div.section {
     display: flex;
     justify-content: center;
     align-content: center;
     height: 100vh;
 }
-.question1{
+
+.question1 {
     display: flex;
     margin-bottom: 5%;
     margin-bottom: 5%;
@@ -81,26 +87,30 @@ div.section{
     padding: 10%;
     height: 750px;
     width: 750px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     box-sizing: border-box;
     color: black;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow:  27px 27px 54px #d4d4d4,
+                 -27px -27px 54px #ffffff;
 }
 
 
-.waves-effect.answer-button-off{
+.waves-effect.answer-button-off {
     width: 100%;
     text-align: left;
 }
-.waves-effect.answer-button-on{
+
+.waves-effect.answer-button-on {
     width: 100%;
     text-align: left;
 }
 
-.waves-effect.disabled.correct-answer{
+.waves-effect.disabled.correct-answer {
     width: 100%;
     text-align: left;
     border: 8px solid #2ABBAD;
     padding-bottom: 55px;
     color: #80f5e9;
 }
-
