@@ -7,6 +7,7 @@ let arrayQs;
 let randomArray;
 let gameData;
 let correctAnswerArray = [];
+let score = 0;
 
 const play = function () {
     getData()
@@ -53,7 +54,8 @@ function render() {
             }
             // store the random array in a new variable    
             randomArray = shuffleArray(answerArray)
-
+            console.log(randomArray)
+            console.log(correctAnswerArray)
             return `
             <div class = "section">
                 <div class ="question1">
@@ -64,20 +66,20 @@ function render() {
                     <table class="table table-hover" style="cursor:pointer">
                         <tbody class="multiple-choice">
                             <tr id="row1">
-                                <th scope="row">A</th>
-                                <th class="answer" id="a">${randomArray[0]}</th>
+                                <a class="waves-effect waves-light btn-large disabled" id="answer-button-off" style="display: none"class="answer" id="a">A) ${randomArray[0]}</a>
+                                <a class="waves-effect waves-light btn-large" id="answer-button-on" style="display: block" class="answer" id="a">A) ${randomArray[0]}</a>
                             </tr>
                             <tr id="row2">
-                                <th scope="row">B</th>
-                                <th class="answer" id="b">${randomArray[1]}</th>
+                                <a class="waves-effect waves-light btn-large disabled" id="answer-button-off" style="display: none"class="answer" id="b">B) ${randomArray[1]}</a>
+                                <a class="waves-effect waves-light btn-large" id="answer-button-on" style="display: block" class="answer" id="b">B) ${randomArray[1]}</a>
                             </tr>
                             <tr id="row3">
-                                <th scope="row">C</th>
-                                <th class="answer" id="c">${randomArray[2]}</th>
+                                <a class="waves-effect waves-light btn-large disabled" id="answer-button-off" style="display: none"class="answer" id="c">C) ${randomArray[2]}</a>
+                                <a class="waves-effect waves-light btn-large" id="answer-button-on" style="display: block" class="answer" id="c">C) ${randomArray[2]}</a>
                             </tr>
                             <tr id="row4">
-                                <th scope="row">D</th>
-                                <th class="answer" id="d">${randomArray[3]}</th>
+                                <a class="waves-effect waves-light btn-large disabled" id="answer-button-off" style="display: none"class="answer" id="d">D) ${randomArray[3]}</a>
+                                <a class="waves-effect waves-light btn-large" id="answer-button-on" style="display: block" class="answer" id="d">D) ${randomArray[3]}</a>
                             </tr>
                         </tbody>
                     </table>
@@ -89,46 +91,51 @@ function render() {
         
     })
     $('main').html(html);
+    console.log(html)
 }
 
 
 function getResult() {
-    $('.answer').on('click', function () {
+    $(document).on('click', '.waves-effect', function () {
+        $('#answer-button-off').show();
+        $('#answer-button-on').hide();
+
 
         let row1 = $(this).closest($('tbody')).children().closest($('#row1')).children().closest('#a').text()
         let row2 = $(this).closest($('tbody')).children().closest($('#row2')).children().closest('#b').text()
         let row3 = $(this).closest($('tbody')).children().closest($('#row3')).children().closest('#c').text()
         let row4 = $(this).closest($('tbody')).children().closest($('#row4')).children().closest('#d').text()
+
+        console.log($(this).children().closest($('#row4')).text())
         
+        // console.log(e.closest($('tbody')).children().closest($('#row1')).children().closest('#a').text())
 
-        console.log(row1)
-
-        if(correctAnswerArray.includes(row1)){
+        if(correctAnswerArray.includes($(this).closest($('tbody')).children().closest($('#row1')).children().closest('#a').text())){
             $(this).closest($('tbody')).children().closest($('#row1')).css("background-color", "green")
         } else {
             $(this).closest($('tbody')).children().closest($('#row1')).css("background-color", "red")
         }
-        if(correctAnswerArray.includes(row2)){
+        if(correctAnswerArray.includes($(this).closest($('tbody')).children().closest($('#row2')).children().closest('#b').text())){
             $(this).closest($('tbody')).children().closest($('#row2')).css("background-color", "green")
         } else {
             $(this).closest($('tbody')).children().closest($('#row2')).css("background-color", "red")
         }
-        if(correctAnswerArray.includes(row3)){
+        if(correctAnswerArray.includes($(this).closest($('tbody')).children().closest($('#row3')).children().closest('#c').text())){
             $(this).closest($('tbody')).children().closest($('#row3')).css("background-color", "green")
         } else {
             $(this).closest($('tbody')).children().closest($('#row3')).css("background-color", "red")
         }
-        if(correctAnswerArray.includes(row4)){
+        if(correctAnswerArray.includes($(this).closest($('tbody')).children().closest($('#row4')).children().closest('#d').text())){
             $(this).closest($('tbody')).children().closest($('#row4')).css("background-color", "green")
         } else {
             $(this).closest($('tbody')).children().closest($('#row4')).css("background-color", "red")
         }
 
-
-        console.log($(this).closest($('tbody')).children().closest($('#row1')).text())
+        console.log(correctAnswerArray)
 
         if (correctAnswerArray.includes($(this).text())) {
             $(this).closest($('tr')).css("background-color", "green")
+            score = score + 1
             console.log('congrats')
             console.log($(this).closest($('tr')))
             alert('congrats')
@@ -137,6 +144,7 @@ function getResult() {
             console.log('wrong')
             alert('wrong')
         }
+        console.log(score)
     })
 }
 

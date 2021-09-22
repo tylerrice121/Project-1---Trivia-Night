@@ -62,3 +62,8 @@ div.section{
     box-sizing: border-box;
     color: white;
 }
+
+.waves-effect{
+    width: 100%;
+    text-align: left;
+}
