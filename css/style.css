@@ -35,6 +35,14 @@ body{
 .begin{
     margin-top: 20px;
 }
+
+.trivia{
+    margin-bottom: 75px;
+}
+
+.next-button{
+    justify-self: flex-end;
+}
 .end{
     height: 100vh;
     flex-direction: column;

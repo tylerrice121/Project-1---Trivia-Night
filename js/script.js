@@ -9,7 +9,6 @@ let gameData;
 let correctAnswerArray = [];
 let score = 0;
 
-
 const play = function () {
     getData()
 }
@@ -85,6 +84,8 @@ function render() {
                                     </tr>
                                 </tbody>
                             </table>
+                            <p class="${index} answer-correct" style="display: none">Correct!</p>
+                            <p class="${index} answer-incorrect" style="display: none">Not quite! The correct answer was A) ${randomArray[0]}</p>
                             <a class="waves-effect waves-light btn next-button ${index}">Next Question</a>      
                         </div>
                     </div>`;                    
@@ -117,6 +118,8 @@ function render() {
                                     </tr>
                                 </tbody>
                             </table>
+                            <p class="${index} answer-correct" style="display: none">Correct!</p>
+                            <p class="${index} answer-incorrect" style="display: none">Not quite! The correct answer was B) ${randomArray[1]}</p>
                             <a class="waves-effect waves-light btn next-button ${index}">Next Question</a>      
                         </div>
                     </div>`;
@@ -149,6 +152,8 @@ function render() {
                                     </tr>
                                 </tbody>
                             </table>
+                            <p class="${index} answer-correct" style="display: none">Correct!</p>
+                            <p class="${index} answer-incorrect" style="display: none">Not quite! The correct answer was C) ${randomArray[2]}</p>
                             <a class="waves-effect waves-light btn next-button ${index}">Next Question</a>      
                         </div>
                     </div>`;
@@ -181,6 +186,8 @@ function render() {
                                     </tr>
                                 </tbody>
                             </table>
+                            <p class="${index} answer-correct" style="display: none">Correct!</p>
+                            <p class="${index} answer-incorrect" style="display: none">Not quite! The correct answer was D) ${randomArray[3]}</p>
                             <a class="waves-effect waves-light btn next-button ${index}">Next Question</a>      
                         </div>
                     </div>`;
@@ -304,20 +311,157 @@ function getResult() {
         })
     })
 //
-    console.log(this)
-    $(document).on('click', '.answer-button-on', function () {
+
+    //pg1
+    $('.0').on('click', '.answer-button-on', function () {
         if ($(this).hasClass('correct-answer')) {
             score = score + 1
             console.log('congrats')
-            console.log($(this).closest($('tr')))
+            $('.0.answer-correct').show()
     
         } else {
             console.log('wrong')
-
+           $('.0.answer-incorrect').show()
         }
         console.log(score)
         renderScore()
     })    
+    //
+    //pg2
+    $('.1').on('click', '.answer-button-on', function () {
+        if ($(this).hasClass('correct-answer')) {
+            score = score + 1
+            console.log('congrats')
+            $('.1.answer-correct').show()
+    
+        } else {
+            console.log('wrong')
+           $('.1.answer-incorrect').show()
+        }
+        console.log(score)
+        renderScore()
+    })    
+    //
+    //pg3
+    $('.2').on('click', '.answer-button-on', function () {
+        if ($(this).hasClass('correct-answer')) {
+            score = score + 1
+            console.log('congrats')
+            $('.2.answer-correct').show()
+    
+        } else {
+            console.log('wrong')
+           $('.2.answer-incorrect').show()
+        }
+        console.log(score)
+        renderScore()
+    })    
+    //
+    //pg4
+    $('.3').on('click', '.answer-button-on', function () {
+        if ($(this).hasClass('correct-answer')) {
+            score = score + 1
+            console.log('congrats')
+            $('.3.answer-correct').show()
+    
+        } else {
+            console.log('wrong')
+           $('.3.answer-incorrect').show()
+        }
+        console.log(score)
+        renderScore()
+    })    
+    //
+    //pg5
+    $('.4').on('click', '.answer-button-on', function () {
+        if ($(this).hasClass('correct-answer')) {
+            score = score + 1
+            console.log('congrats')
+            $('.4.answer-correct').show()
+    
+        } else {
+            console.log('wrong')
+           $('.4.answer-incorrect').show()
+        }
+        console.log(score)
+        renderScore()
+    })    
+    //
+    //pg6
+    $('.5').on('click', '.answer-button-on', function () {
+        if ($(this).hasClass('correct-answer')) {
+            score = score + 1
+            console.log('congrats')
+            $('.5.answer-correct').show()
+    
+        } else {
+            console.log('wrong')
+           $('.5.answer-incorrect').show()
+        }
+        console.log(score)
+        renderScore()
+    })    
+    //
+    //pg7
+    $('.6').on('click', '.answer-button-on', function () {
+        if ($(this).hasClass('correct-answer')) {
+            score = score + 1
+            console.log('congrats')
+            $('.6.answer-correct').show()
+    
+        } else {
+            console.log('wrong')
+           $('.6.answer-incorrect').show()
+        }
+        console.log(score)
+        renderScore()
+    })    
+    //
+    //pg8
+    $('.7').on('click', '.answer-button-on', function () {
+        if ($(this).hasClass('correct-answer')) {
+            score = score + 1
+            console.log('congrats')
+            $('.7.answer-correct').show()
+    
+        } else {
+            console.log('wrong')
+           $('.7.answer-incorrect').show()
+        }
+        console.log(score)
+        renderScore()
+    })    
+    //
+    //pg9
+    $('.8').on('click', '.answer-button-on', function () {
+        if ($(this).hasClass('correct-answer')) {
+            score = score + 1
+            console.log('congrats')
+            $('.8.answer-correct').show()
+    
+        } else {
+            console.log('wrong')
+           $('.8.answer-incorrect').show()
+        }
+        console.log(score)
+        renderScore()
+    })    
+    //
+    //pg10
+    $('.9').on('click', '.answer-button-on', function () {
+        if ($(this).hasClass('correct-answer')) {
+            score = score + 1
+            console.log('congrats')
+            $('.9.answer-correct').show()
+    
+        } else {
+            console.log('wrong')
+           $('.9.answer-incorrect').show()
+        }
+        console.log(score)
+        renderScore()
+    })    
+    //
 
     }
 
@@ -415,6 +559,7 @@ function scrollClick(){
     })
     //
 }
+
 scrollClick()
 
 play()
