@@ -85,7 +85,7 @@ function render() {
                                     </tr>
                                 </tbody>
                             </table>
-                            <a class="waves-effect waves-light btn ${index}">Next Question</a>      
+                            <a class="waves-effect waves-light btn next-button ${index}">Next Question</a>      
                         </div>
                     </div>`;                    
                 } else if (randomArray[1] === $correctanswer) {
@@ -117,7 +117,7 @@ function render() {
                                     </tr>
                                 </tbody>
                             </table>
-                            <a class="waves-effect waves-light btn ${index}">Next Question</a>      
+                            <a class="waves-effect waves-light btn next-button ${index}">Next Question</a>      
                         </div>
                     </div>`;
                 } else if (randomArray[2] === $correctanswer) {
@@ -149,7 +149,7 @@ function render() {
                                     </tr>
                                 </tbody>
                             </table>
-                            <a class="waves-effect waves-light btn ${index}">Next Question</a>      
+                            <a class="waves-effect waves-light btn next-button ${index}">Next Question</a>      
                         </div>
                     </div>`;
                 } else if (randomArray[3] === $correctanswer) {
@@ -181,7 +181,7 @@ function render() {
                                     </tr>
                                 </tbody>
                             </table>
-                            <a class="waves-effect waves-light btn ${index}">Next Question</a>      
+                            <a class="waves-effect waves-light btn next-button ${index}">Next Question</a>      
                         </div>
                     </div>`;
                 }
@@ -194,6 +194,7 @@ console.log(html)
 }
 
 function getResult() {
+
     //PG1
         $('.0').on('click', '.answer-button-on', function () {
         $('.0.answer-button-off').each(function(){
@@ -309,38 +310,112 @@ function getResult() {
             score = score + 1
             console.log('congrats')
             console.log($(this).closest($('tr')))
-            alert('congrats')
+    
         } else {
             console.log('wrong')
-            alert('wrong')
+
         }
         console.log(score)
+        renderScore()
     })    
 
     }
 
 function renderScore(){
-    $('.end h2').append(`<p>Your final score: ${score}/10</p>`)
+    $('.results').empty().html(`Your final score: ${score}/10`)
     
     $('.end').on('click','.play-again',function() {
         location.href=location.href;
     });
 }
-renderScore()
 
-// console.log(randomArray)
-// function scroll(){
-//     $('a').on('click', 'button', function(){
-//         let next = $(this).closest(".question1").next(),
-//         section = $(this).closest('html')
+function scrollClick(){
 
-// 		section.animate({
-//             scrollTop: $('html').scrollTop() + fuller.offset().top
-
-//         }, 700);
-// })
-// }
-// scroll()
+    //scroll to 1
+    $(document).on('click','.begin',function () {
+        $('html, body').animate({
+            scrollTop: $('.0.section').offset().top
+        });
+        })
+    //scroll to 2
+    $(document).on('click','.0.next-button',function () {
+    $('html, body').animate({
+        scrollTop: $('.1.section').offset().top
+    });
+    })
+    //
+    //scroll to 3
+    $(document).on('click','.1.next-button',function () {
+    $('html, body').animate({
+        scrollTop: $('.2.section').offset().top
+    });
+    })
+    //
+    //scroll to 4
+    $(document).on('click','.2.next-button',function () {
+    $('html, body').animate({
+        scrollTop: $('.3.section').offset().top
+    });
+    })
+    //
+    //scroll to 5
+    $(document).on('click','.3.next-button',function () {
+    $('html, body').animate({
+        scrollTop: $('.4.section').offset().top
+    });
+    })
+    //
+    //scroll to 6
+    $(document).on('click','.4.next-button',function () {
+    $('html, body').animate({
+        scrollTop: $('.5.section').offset().top
+    });
+    })
+    //
+    //scroll to 7
+    $(document).on('click','.5.next-button',function () {
+    $('html, body').animate({
+        scrollTop: $('.6.section').offset().top
+    });
+    })
+    //
+    //scroll to 2
+    $(document).on('click','.0.next-button',function () {
+    $('html, body').animate({
+        scrollTop: $('.1.section').offset().top
+    });
+    })
+    //
+    //scroll to 8
+    $(document).on('click','.6.next-button',function () {
+    $('html, body').animate({
+        scrollTop: $('.7.section').offset().top
+    });
+    })
+    //
+    //scroll to 9
+    $(document).on('click','.7.next-button',function () {
+    $('html, body').animate({
+        scrollTop: $('.8.section').offset().top
+    });
+    })
+    //
+    //scroll to 10
+    $(document).on('click','.8.next-button',function () {
+    $('html, body').animate({
+        scrollTop: $('.9.section').offset().top
+    });
+    })
+    //
+    //scroll to end
+    $(document).on('click','.9.next-button',function () {
+    $('html, body').animate({
+        scrollTop: $('.end').offset().top
+    });
+    })
+    //
+}
+scrollClick()
 
 play()
 
