@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-
+    font-family: 'Bangers', sans-serif
 }
 
 html {
@@ -17,11 +17,15 @@ body {
     flex-direction: column;
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(to right, #f5faff, #f2fcff, #f1fdfe, #f1fffa, #f5fff6, #f5fff4, #f5fef1, #f5feef, #eefeef, #e6fff1, #defff5, #d6fffa);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    /* background-image: linear-gradient(to right top, #f8fffe, #f7feff, #f7fdff, #f8fbff, #f9faff); */
+    background-image: linear-gradient(to right top, #e6fffd, #e7fefd, #e8fdfc, #eafcfc, #ebfbfb);
+
 }
 
-.header,
-.end {
+.header,.end {
     display: flex;
     width: 100vw;
     align-items: center;
@@ -30,9 +34,9 @@ body {
     padding: 1rem;
     background: white;
     text-align: center;
-    background-image: linear-gradient(to right, #f5faff, #f2fcff, #f1fdfe, #f1fffa, #f5fff6, #f5fff4, #f5fef1, #f5feef, #eefeef, #e6fff1, #defff5, #d6fffa);
-}
-
+    /* background-image: linear-gradient(to right top, #f8fffe, #f7feff, #f7fdff, #f8fbff, #f9faff); */
+    background-image: linear-gradient(to right top, #e6fffd, #e7fefd, #e8fdfc, #eafcfc, #ebfbfb);  
+}    
 .header {
     position: sticky;
     height: 100vh;
@@ -57,9 +61,14 @@ body {
     flex-direction: column;
 }
 
-h2 {
+h1 {
     padding: 0;
     margin: 0;
+    font-family: 'Lobster', sans-serif;
+}
+
+h6, h4{
+    font-family: 'Lobster', sans-serif;
 }
 
 .multiple-choice {
@@ -93,13 +102,11 @@ div.section {
     padding-bottom: 10%;
     height: 750px;
     width: 750px;
-    box-sizing: border-box;
-    color: #373737;
-    border: 1px solid black;
-    border-radius: 22px;
-    background: #fafafa;
-    box-shadow:  6px 6px 20px #d7d7d7,
-                 -6px -6px 20px #ffffff;
+    color: black;
+    border-radius: 14px;
+    background: linear-gradient(145deg, #f7f6f6, #ffffff);
+    box-shadow:  10px 10px 20px #aaaaaa,
+                 -10px -10px 20px #ffffff;
 }
 h4{
     margin-top: 2px;
@@ -121,8 +128,8 @@ h4{
 .waves-effect.answer-button-on {
     width: 100%;
     text-align: left;
-    background-color: #F1F1F1;
-    color: #373737;
+    background-color: #2ABBAD;
+    color: white;
 }
 
 .waves-effect.disabled.correct-answer {

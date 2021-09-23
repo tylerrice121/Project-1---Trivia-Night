@@ -67,20 +67,20 @@ function render() {
                             <table class="table table-hover" style="cursor:pointer">
                                 <tbody class="multiple-choice">
                                     <tr id="row1">
-                                        <a class="${index} waves-effect waves-light btn-large disabled correct-answer answer-button-off" style="display: none" id="a">A) ${randomArray[0]}</a>
-                                        <a class="${index} waves-effect waves-light btn-large correct-answer answer-button-on" style="display: block" d="a">A) ${randomArray[0]}</a>
+                                        <a class="${index} waves-effect waves-light btn-large disabled correct-answer answer-button-off" style="display: none" id="a">A) ${randomArray[0]}</b></a>
+                                        <a class="${index} waves-effect waves-light btn-large correct-answer answer-button-on" style="display: block" d="a"><b>A) ${randomArray[0]}</b></a>
                                     </tr>
                                     <tr id="row2">
-                                        <a class="${index} waves-effect waves-light btn-large disabled answer-button-off" style="display: none" id="b">B) ${randomArray[1]}</a>
-                                        <a class="${index} waves-effect waves-light btn-large answer-button-on" style="display: block" id="b">B) ${randomArray[1]}</a>
+                                        <a class="${index} waves-effect waves-light btn-large disabled answer-button-off" style="display: none" id="b">B) ${randomArray[1]}</b></a>
+                                        <a class="${index} waves-effect waves-light btn-large answer-button-on" style="display: block" id="b"><b>B) ${randomArray[1]}</b></a>
                                     </tr>
                                     <tr id="row3">
-                                        <a class="${index} waves-effect waves-light btn-large disabled answer-button-off" style="display: none" id="c">C) ${randomArray[2]}</a>
-                                        <a class="${index} waves-effect waves-light btn-large answer-button-on" style="display: block" id="c">C) ${randomArray[2]}</a>
+                                        <a class="${index} waves-effect waves-light btn-large disabled answer-button-off" style="display: none" id="c">C) ${randomArray[2]}</b></a>
+                                        <a class="${index} waves-effect waves-light btn-large answer-button-on" style="display: block" id="c"><b>C) ${randomArray[2]}</b></a>
                                     </tr>
                                     <tr id="row4">
-                                        <a class="${index} waves-effect waves-light btn-large disabled answer-button-off" style="display: none" id="d">D) ${randomArray[3]}</a>
-                                        <a class="${index} waves-effect waves-light btn-large answer-button-on" style="display: block" id="d">D) ${randomArray[3]}</a>
+                                        <a class="${index} waves-effect waves-light btn-large disabled answer-button-off" style="display: none" id="d">D) ${randomArray[3]}</b></a>
+                                        <a class="${index} waves-effect waves-light btn-large answer-button-on" style="display: block" id="d"><b>D) ${randomArray[3]}</b></a>
                                     </tr>
                                 </tbody>
                             </table>
@@ -94,27 +94,27 @@ function render() {
                     return `
                     <div class = "${index} section">
                         <div class ="question1">
-                            <h5><u>Category</u></h5>
+                            <h5 class="category-header"><u>Category</u></h5>
                             <p class="category"><b>${q.category}</b></p>
-                            <h4><u>Question</u></h4>
+                            <h4 class="question-header"><u>Question</u></h4>
                             <h6 class="question"><b>${q.question}</b></h6>
                             <table class="table table-hover" style="cursor:pointer">
                                 <tbody class="multiple-choice">
                                     <tr id="row1">
-                                        <a class="${index} waves-effect waves-light btn-large disabled answer-button-off" style="display: none" id="a">A) ${randomArray[0]}</a>
-                                        <a class="${index} waves-effect waves-light btn-large answer-button-on" style="display: block" id="a">A) ${randomArray[0]}</a>
+                                        <a class="${index} waves-effect waves-light btn-large disabled answer-button-off" style="display: none" id="a"><b>A) ${randomArray[0]}</b></a>
+                                        <a class="${index} waves-effect waves-light btn-large answer-button-on" style="display: block" id="a"><b>A) ${randomArray[0]}</b></a>
                                     </tr>
                                     <tr id="row2">
-                                        <a class="${index} waves-effect waves-light btn-large disabled correct-answer answer-button-off" style="display: none" id="b">B) ${randomArray[1]}</a>
-                                        <a class="${index} waves-effect waves-light btn-large correct-answer answer-button-on" style="display: block" id="b">B) ${randomArray[1]}</a>
+                                        <a class="${index} waves-effect waves-light btn-large disabled correct-answer answer-button-off" style="display: none" id="b"><b>B) ${randomArray[1]}</b></a>
+                                        <a class="${index} waves-effect waves-light btn-large correct-answer answer-button-on" style="display: block" id="b"><b>B) ${randomArray[1]}</b></a>
                                     </tr>
                                     <tr id="row3">
-                                        <a class="${index} waves-effect waves-light btn-large disabled answer-button-off" style="display: none" id="c">C) ${randomArray[2]}</a>
-                                        <a class="${index} waves-effect waves-light btn-large answer-button-on" style="display: block" id="c">C) ${randomArray[2]}</a>
+                                        <a class="${index} waves-effect waves-light btn-large disabled answer-button-off" style="display: none" id="c"><b>C) ${randomArray[2]}</b></a>
+                                        <a class="${index} waves-effect waves-light btn-large answer-button-on" style="display: block" id="c"><b>C) ${randomArray[2]}</b></a>
                                     </tr>
                                     <tr id="row4">
-                                        <a class="${index} waves-effect waves-light btn-large disabled answer-button-off" style="display: none" id="d">D) ${randomArray[3]}</a>
-                                        <a class="${index} waves-effect waves-light btn-large answer-button-on" style="display: block" id="d">D) ${randomArray[3]}</a>
+                                        <a class="${index} waves-effect waves-light btn-large disabled answer-button-off" style="display: none" id="d"><b>D) ${randomArray[3]}</b></a>
+                                        <a class="${index} waves-effect waves-light btn-large answer-button-on" style="display: block" id="d"><b>D) ${randomArray[3]}</b></a>
                                     </tr>
                                 </tbody>
                             </table>
@@ -135,20 +135,20 @@ function render() {
                             <table class="table table-hover" style="cursor:pointer">
                                 <tbody class="multiple-choice">
                                     <tr id="row1">
-                                        <a class="${index} waves-effect waves-light btn-large disabled answer-button-off" style="display: none" id="a">A) ${randomArray[0]}</a>
-                                        <a class="${index} waves-effect waves-light btn-large answer-button-on" style="display: block" id="a">A) ${randomArray[0]}</a>
+                                        <a class="${index} waves-effect waves-light btn-large disabled answer-button-off" style="display: none" id="a"><b>A) ${randomArray[0]}</b></a>
+                                        <a class="${index} waves-effect waves-light btn-large answer-button-on" style="display: block" id="a"><b>A) ${randomArray[0]}</b></a>
                                     </tr>
                                     <tr id="row2">
-                                        <a class="${index} waves-effect waves-light btn-large disabled answer-button-off" style="display: none" id="b">B) ${randomArray[1]}</a>
-                                        <a class="${index} waves-effect waves-light btn-large answer-button-on" style="display: block" id="b">B) ${randomArray[1]}</a>
+                                        <a class="${index} waves-effect waves-light btn-large disabled answer-button-off" style="display: none" id="b"><b>B) ${randomArray[1]}</b></a>
+                                        <a class="${index} waves-effect waves-light btn-large answer-button-on" style="display: block" id="b"><b>B) ${randomArray[1]}</b></a>
                                     </tr>
                                     <tr id="row3">
-                                        <a class="${index} waves-effect waves-light btn-large disabled correct-answer answer-button-off" style="display: none" id="c">C) ${randomArray[2]}</a>
-                                        <a class="${index} waves-effect waves-light btn-large correct-answer answer-button-on" style="display: block" id="c">C) ${randomArray[2]}</a>
+                                        <a class="${index} waves-effect waves-light btn-large disabled correct-answer answer-button-off" style="display: none" id="c"><b>C) ${randomArray[2]}</b></a>
+                                        <a class="${index} waves-effect waves-light btn-large correct-answer answer-button-on" style="display: block" id="c"><b>C) ${randomArray[2]}</b></a>
                                     </tr>
                                     <tr id="row4">
-                                        <a class="${index} waves-effect waves-light btn-large disabled answer-button-off" style="display: none" id="d">D) ${randomArray[3]}</a>
-                                        <a class="${index} waves-effect waves-light btn-large answer-button-on" style="display: block" id="d">D) ${randomArray[3]}</a>
+                                        <a class="${index} waves-effect waves-light btn-large disabled answer-button-off" style="display: none" id="d"><b>D) ${randomArray[3]}</b></a>
+                                        <a class="${index} waves-effect waves-light btn-large answer-button-on" style="display: block" id="d"><b>D) ${randomArray[3]}</b></a>
                                     </tr>
                                 </tbody>
                             </table>
@@ -169,20 +169,20 @@ function render() {
                             <table class="table table-hover" style="cursor:pointer">
                                 <tbody class="multiple-choice">
                                     <tr id="row1">
-                                        <a class="${index} waves-effect waves-light btn-large disabled answer-button-off" style="display: none" id="a">A) ${randomArray[0]}</a>
-                                        <a class="${index} waves-effect waves-light btn-large answer-button-on" style="display: block" id="a">A) ${randomArray[0]}</a>
+                                        <a class="${index} waves-effect waves-light btn-large disabled answer-button-off" style="display: none" id="a"><b>A) ${randomArray[0]}</b></a>
+                                        <a class="${index} waves-effect waves-light btn-large answer-button-on" style="display: block" id="a"><b>A) ${randomArray[0]}</b></a>
                                     </tr>
                                     <tr id="row2">
-                                        <a class="${index} waves-effect waves-light btn-large disabled answer-button-off" style="display: none" id="b">B) ${randomArray[1]}</a>
-                                        <a class="${index} waves-effect waves-light btn-large answer-button-on" style="display: block" id="b">B) ${randomArray[1]}</a>
+                                        <a class="${index} waves-effect waves-light btn-large disabled answer-button-off" style="display: none" id="b"><b>B) ${randomArray[1]}</b></a>
+                                        <a class="${index} waves-effect waves-light btn-large answer-button-on" style="display: block" id="b"><b>B) ${randomArray[1]}</b></a>
                                     </tr>
                                     <tr id="row3">
-                                        <a class="${index} waves-effect waves-light btn-large disabled answer-button-off" style="display: none" id="c">C) ${randomArray[2]}</a>
-                                        <a class="${index} waves-effect waves-light btn-large answer-button-on" style="display: block" id="c">C) ${randomArray[2]}</a>
+                                        <a class="${index} waves-effect waves-light btn-large disabled answer-button-off" style="display: none" id="c"><b>C) ${randomArray[2]}</b></a>
+                                        <a class="${index} waves-effect waves-light btn-large answer-button-on" style="display: block" id="c"><b>C) ${randomArray[2]}</b></a>
                                     </tr>
                                     <tr id="row4">
-                                        <a class="${index} waves-effect waves-light btn-large disabled correct-answer answer-button-off" style="display: none" id="d">D) ${randomArray[3]}</a>
-                                        <a class="${index} waves-effect waves-light btn-large correct-answer answer-button-on" style="display: block" id="d">D) ${randomArray[3]}</a>
+                                        <a class="${index} waves-effect waves-light btn-large disabled correct-answer answer-button-off" style="display: none" id="d"><b>D) ${randomArray[3]}</b></a>
+                                        <a class="${index} waves-effect waves-light btn-large correct-answer answer-button-on" style="display: block" id="d"><b>D) ${randomArray[3]}</b></a>
                                     </tr>
                                 </tbody>
                             </table>
