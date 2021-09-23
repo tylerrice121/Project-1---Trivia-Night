@@ -21,7 +21,8 @@ body {
     background-size: 100%;
     background-attachment: fixed;
     /* background-image: linear-gradient(to right top, #f8fffe, #f7feff, #f7fdff, #f8fbff, #f9faff); */
-    background-image: linear-gradient(to right top, #e6fffd, #e7fefd, #e8fdfc, #eafcfc, #ebfbfb);
+    /* background-image: linear-gradient(to right top, #e6fffd, #e7fefd, #e8fdfc, #eafcfc, #ebfbfb); */
+    background-image: linear-gradient(to right, #f6f6f6, #f7f8f9, #f7fafc, #f6fdfe, #f6fffe);
 
 }
 
@@ -35,7 +36,8 @@ body {
     background: white;
     text-align: center;
     /* background-image: linear-gradient(to right top, #f8fffe, #f7feff, #f7fdff, #f8fbff, #f9faff); */
-    background-image: linear-gradient(to right top, #e6fffd, #e7fefd, #e8fdfc, #eafcfc, #ebfbfb);  
+    /* background-image: linear-gradient(to right top, #e6fffd, #e7fefd, #e8fdfc, #eafcfc, #ebfbfb);   */
+    background-image: linear-gradient(to right, #f6f6f6, #f7f8f9, #f7fafc, #f6fdfe, #f6fffe);
 }    
 .header {
     position: sticky;
@@ -67,7 +69,7 @@ h1 {
     font-family: 'Lobster', sans-serif;
 }
 
-h6, h4{
+.cursive{
     font-family: 'Lobster', sans-serif;
 }
 
@@ -103,6 +105,7 @@ div.section {
     height: 750px;
     width: 750px;
     color: black;
+    /* border: 1px solid black; */
     border-radius: 14px;
     background: linear-gradient(145deg, #f7f6f6, #ffffff);
     box-shadow:  10px 10px 20px #aaaaaa,
@@ -129,6 +132,8 @@ h4{
     width: 100%;
     text-align: left;
     background-color: #2ABBAD;
+    /* border: 1px solid black; */
+    /* background-color: #e7e4e4; */
     color: white;
 }
 

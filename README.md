@@ -9,13 +9,13 @@ This is my project one for the SEIR Program
 - JavaScript/jQuery
 
 # Screenshots
-![screenshot 1](./Screenshot1.png)
-![screenshot 2](./Screenshot2.png)
-![screenshot 3](./Screenshot3.png)
+![screenshot 1](./Screenshot4.png)
+![screenshot 2](./Screenshot5.png)
+![screenshot 3](./Screenshot6.png)
 
 # Getting Started
 
-[click here](#) to see the deployed project
+[click here](https://tylerrice121.github.io/Project-1---Trivia-Night/) to see the deployed project
 
 # Future Enhancements
 - Sound FX

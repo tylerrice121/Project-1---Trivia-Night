@@ -1,3 +1,5 @@
+(function(){
+
 //variables
 let $correctanswer;
 let $incorrectanswerA;
@@ -56,13 +58,13 @@ function render() {
                 // console.log(randomArray[0])
 
                 if (randomArray[0] === $correctanswer) {
-                    console.log(`the correct answer is A`)
+
                     return `
                     <div class = "${index} section">
                         <div class ="question1">
-                            <h5><u>Category</u></h5>
+                            <h5 class="cursive">Category</h5>
                             <p class="category"><b>${q.category}</b></p>
-                            <h4><u>Question</u></h4>
+                            <h4 class="cursive">Question</h4>
                             <h6 class="question"><b>${q.question}</b></h6>
                             <table class="table table-hover" style="cursor:pointer">
                                 <tbody class="multiple-choice">
@@ -90,13 +92,13 @@ function render() {
                         </div>
                     </div>`;                    
                 } else if (randomArray[1] === $correctanswer) {
-                    console.log(`the correct answer is B`)
+
                     return `
                     <div class = "${index} section">
                         <div class ="question1">
-                            <h5 class="category-header"><u>Category</u></h5>
+                            <h5 class="cursive"">Category</h5>
                             <p class="category"><b>${q.category}</b></p>
-                            <h4 class="question-header"><u>Question</u></h4>
+                            <h4 class="cursive">Question</h4>
                             <h6 class="question"><b>${q.question}</b></h6>
                             <table class="table table-hover" style="cursor:pointer">
                                 <tbody class="multiple-choice">
@@ -124,13 +126,13 @@ function render() {
                         </div>
                     </div>`;
                 } else if (randomArray[2] === $correctanswer) {
-                    console.log(`the correct answer is C`)
+
                     return `
                     <div class = "${index} section">
                         <div class ="question1">
-                            <h5><u>Category</u></h5>
+                            <h5 class="cursive">Category</h5>
                             <p class="category"><b>${q.category}</b></p>
-                            <h4><u>Question</u></h4>
+                            <h4 class="cursive">Question</h4>
                             <h6 class="question"><b>${q.question}</b></h6>
                             <table class="table table-hover" style="cursor:pointer">
                                 <tbody class="multiple-choice">
@@ -158,13 +160,13 @@ function render() {
                         </div>
                     </div>`;
                 } else if (randomArray[3] === $correctanswer) {
-                    console.log(`the correct answer is D`)
+
                     return `
                     <div class = "${index} section">
                         <div class ="question1">
-                            <h5><u>Category</u></h5>
+                            <h5 class="cursive">Category</h5>
                             <p class="category"><b>${q.category}</b></p>
-                            <h4><u>Question</u></h4>
+                            <h4 class="cursive">Question</h4>
                             <h6 class="question"><b>${q.question}</b></h6>  
                             <table class="table table-hover" style="cursor:pointer">
                                 <tbody class="multiple-choice">
@@ -196,7 +198,7 @@ function render() {
     })
 $('main').html(html);
 
-console.log(html)
+
 
 }
 
@@ -565,3 +567,5 @@ scrollClick()
 play()
 
 M.AutoInit();
+
+})();
