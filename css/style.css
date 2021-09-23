@@ -8,7 +8,7 @@ html {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    
+
 }
 
 body {
@@ -17,10 +17,11 @@ body {
     flex-direction: column;
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(to right top, #ffecf7, #fef0fa, #fdf4fd, #fcf8fe, #fdfbff, #fdfcff, #fefeff, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff);
+    background-image: linear-gradient(to right, #f5faff, #f2fcff, #f1fdfe, #f1fffa, #f5fff6, #f5fff4, #f5fef1, #f5feef, #eefeef, #e6fff1, #defff5, #d6fffa);
 }
 
-.header, .end {
+.header,
+.end {
     display: flex;
     width: 100vw;
     align-items: center;
@@ -29,6 +30,7 @@ body {
     padding: 1rem;
     background: white;
     text-align: center;
+    background-image: linear-gradient(to right, #f5faff, #f2fcff, #f1fdfe, #f1fffa, #f5fff6, #f5fff4, #f5fef1, #f5feef, #eefeef, #e6fff1, #defff5, #d6fffa);
 }
 
 .header {
@@ -43,6 +45,7 @@ body {
 
 .trivia {
     margin-bottom: 75px;
+    margin-top: 10px;
 }
 
 .next-button {
@@ -82,20 +85,33 @@ div.section {
     margin-bottom: 5%;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin-top: 75px;
-    padding: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 10%;
     height: 750px;
     width: 750px;
-    /* border: 1px solid black; */
     box-sizing: border-box;
-    color: black;
-    border-radius: 16px;
-    background: #ffffff;
-    box-shadow:  27px 27px 54px #d4d4d4,
-                 -27px -27px 54px #ffffff;
+    color: #373737;
+    border: 1px solid black;
+    border-radius: 22px;
+    background: #fafafa;
+    box-shadow:  6px 6px 20px #d7d7d7,
+                 -6px -6px 20px #ffffff;
 }
-
+h4{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    text-align: left;
+    line-height: 50px;
+}
+.question{
+    margin-top: 0px;
+    line-height: 30px;
+    text-align: left;
+}
 
 .waves-effect.answer-button-off {
     width: 100%;
@@ -105,12 +121,14 @@ div.section {
 .waves-effect.answer-button-on {
     width: 100%;
     text-align: left;
+    background-color: #F1F1F1;
+    color: #373737;
 }
 
 .waves-effect.disabled.correct-answer {
     width: 100%;
     text-align: left;
-    border: 8px solid #2ABBAD;
+    border: 4px solid #2ABBAD;
     padding-bottom: 55px;
     color: #80f5e9;
 }

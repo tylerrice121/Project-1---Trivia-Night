@@ -60,10 +60,10 @@ function render() {
                     return `
                     <div class = "${index} section">
                         <div class ="question1">
-                            <h2>Category</h2>
-                            <p class="category">${q.category}</p>
-                            <h2>Question</h2>
-                            <p class="question">${q.question}</p>
+                            <h5><u>Category</u></h5>
+                            <p class="category"><b>${q.category}</b></p>
+                            <h4><u>Question</u></h4>
+                            <h6 class="question"><b>${q.question}</b></h6>
                             <table class="table table-hover" style="cursor:pointer">
                                 <tbody class="multiple-choice">
                                     <tr id="row1">
@@ -84,8 +84,8 @@ function render() {
                                     </tr>
                                 </tbody>
                             </table>
-                            <p class="${index} answer-correct" style="display: none">Correct!</p>
-                            <p class="${index} answer-incorrect" style="display: none">Not quite! The correct answer was A) ${randomArray[0]}</p>
+                            <p class="${index} answer-correct" style="display: none"><b>Correct!</b></p>
+                            <p class="${index} answer-incorrect" style="display: none"><b>Not quite! The correct answer was C) ${randomArray[0]}</b></p>
                             <a class="waves-effect waves-light btn next-button ${index}">Next Question</a>      
                         </div>
                     </div>`;                    
@@ -94,10 +94,10 @@ function render() {
                     return `
                     <div class = "${index} section">
                         <div class ="question1">
-                            <h2>Category</h2>
-                            <p class="category">${q.category}</p>
-                            <h2>Question</h2>
-                            <p class="question">${q.question}</p>
+                            <h5><u>Category</u></h5>
+                            <p class="category"><b>${q.category}</b></p>
+                            <h4><u>Question</u></h4>
+                            <h6 class="question"><b>${q.question}</b></h6>
                             <table class="table table-hover" style="cursor:pointer">
                                 <tbody class="multiple-choice">
                                     <tr id="row1">
@@ -118,8 +118,8 @@ function render() {
                                     </tr>
                                 </tbody>
                             </table>
-                            <p class="${index} answer-correct" style="display: none">Correct!</p>
-                            <p class="${index} answer-incorrect" style="display: none">Not quite! The correct answer was B) ${randomArray[1]}</p>
+                            <p class="${index} answer-correct" style="display: none"><b>Correct!</b></p>
+                            <p class="${index} answer-incorrect" style="display: none"><b>Not quite! The correct answer was C) ${randomArray[1]}</b></p>
                             <a class="waves-effect waves-light btn next-button ${index}">Next Question</a>      
                         </div>
                     </div>`;
@@ -128,10 +128,10 @@ function render() {
                     return `
                     <div class = "${index} section">
                         <div class ="question1">
-                            <h2>Category</h2>
-                            <p class="category">${q.category}</p>
-                            <h2>Question</h2>
-                            <p class="question">${q.question}</p>
+                            <h5><u>Category</u></h5>
+                            <p class="category"><b>${q.category}</b></p>
+                            <h4><u>Question</u></h4>
+                            <h6 class="question"><b>${q.question}</b></h6>
                             <table class="table table-hover" style="cursor:pointer">
                                 <tbody class="multiple-choice">
                                     <tr id="row1">
@@ -152,8 +152,8 @@ function render() {
                                     </tr>
                                 </tbody>
                             </table>
-                            <p class="${index} answer-correct" style="display: none">Correct!</p>
-                            <p class="${index} answer-incorrect" style="display: none">Not quite! The correct answer was C) ${randomArray[2]}</p>
+                            <p class="${index} answer-correct" style="display: none"><b>Correct!</b></p>
+                            <p class="${index} answer-incorrect" style="display: none"><b>Not quite! The correct answer was C) ${randomArray[2]}</b></p>
                             <a class="waves-effect waves-light btn next-button ${index}">Next Question</a>      
                         </div>
                     </div>`;
@@ -162,10 +162,10 @@ function render() {
                     return `
                     <div class = "${index} section">
                         <div class ="question1">
-                            <h2>Category</h2>
-                            <p class="category">${q.category}</p>
-                            <h2>Question</h2>
-                            <p class="question">${q.question}</p>
+                            <h5><u>Category</u></h5>
+                            <p class="category"><b>${q.category}</b></p>
+                            <h4><u>Question</u></h4>
+                            <h6 class="question"><b>${q.question}</b></h6>  
                             <table class="table table-hover" style="cursor:pointer">
                                 <tbody class="multiple-choice">
                                     <tr id="row1">
@@ -186,8 +186,8 @@ function render() {
                                     </tr>
                                 </tbody>
                             </table>
-                            <p class="${index} answer-correct" style="display: none">Correct!</p>
-                            <p class="${index} answer-incorrect" style="display: none">Not quite! The correct answer was D) ${randomArray[3]}</p>
+                            <p class="${index} answer-correct" style="display: none"><b>Correct!</b></p>
+                            <p class="${index} answer-incorrect" style="display: none"><b>Not quite! The correct answer was C) ${randomArray[3]}</b></p>
                             <a class="waves-effect waves-light btn next-button ${index}">Next Question</a>      
                         </div>
                     </div>`;
@@ -316,11 +316,11 @@ function getResult() {
     $('.0').on('click', '.answer-button-on', function () {
         if ($(this).hasClass('correct-answer')) {
             score = score + 1
-            console.log('congrats')
+
             $('.0.answer-correct').show()
     
         } else {
-            console.log('wrong')
+
            $('.0.answer-incorrect').show()
         }
         console.log(score)
@@ -331,11 +331,11 @@ function getResult() {
     $('.1').on('click', '.answer-button-on', function () {
         if ($(this).hasClass('correct-answer')) {
             score = score + 1
-            console.log('congrats')
+
             $('.1.answer-correct').show()
     
         } else {
-            console.log('wrong')
+
            $('.1.answer-incorrect').show()
         }
         console.log(score)
@@ -346,11 +346,11 @@ function getResult() {
     $('.2').on('click', '.answer-button-on', function () {
         if ($(this).hasClass('correct-answer')) {
             score = score + 1
-            console.log('congrats')
+
             $('.2.answer-correct').show()
     
         } else {
-            console.log('wrong')
+
            $('.2.answer-incorrect').show()
         }
         console.log(score)
@@ -361,11 +361,11 @@ function getResult() {
     $('.3').on('click', '.answer-button-on', function () {
         if ($(this).hasClass('correct-answer')) {
             score = score + 1
-            console.log('congrats')
+
             $('.3.answer-correct').show()
     
         } else {
-            console.log('wrong')
+
            $('.3.answer-incorrect').show()
         }
         console.log(score)
@@ -376,11 +376,11 @@ function getResult() {
     $('.4').on('click', '.answer-button-on', function () {
         if ($(this).hasClass('correct-answer')) {
             score = score + 1
-            console.log('congrats')
+
             $('.4.answer-correct').show()
     
         } else {
-            console.log('wrong')
+
            $('.4.answer-incorrect').show()
         }
         console.log(score)
@@ -391,11 +391,11 @@ function getResult() {
     $('.5').on('click', '.answer-button-on', function () {
         if ($(this).hasClass('correct-answer')) {
             score = score + 1
-            console.log('congrats')
+
             $('.5.answer-correct').show()
     
         } else {
-            console.log('wrong')
+
            $('.5.answer-incorrect').show()
         }
         console.log(score)
@@ -406,14 +406,14 @@ function getResult() {
     $('.6').on('click', '.answer-button-on', function () {
         if ($(this).hasClass('correct-answer')) {
             score = score + 1
-            console.log('congrats')
+
             $('.6.answer-correct').show()
     
         } else {
-            console.log('wrong')
+
            $('.6.answer-incorrect').show()
         }
-        console.log(score)
+
         renderScore()
     })    
     //
@@ -421,14 +421,14 @@ function getResult() {
     $('.7').on('click', '.answer-button-on', function () {
         if ($(this).hasClass('correct-answer')) {
             score = score + 1
-            console.log('congrats')
+
             $('.7.answer-correct').show()
     
         } else {
             console.log('wrong')
            $('.7.answer-incorrect').show()
         }
-        console.log(score)
+
         renderScore()
     })    
     //
@@ -436,14 +436,14 @@ function getResult() {
     $('.8').on('click', '.answer-button-on', function () {
         if ($(this).hasClass('correct-answer')) {
             score = score + 1
-            console.log('congrats')
+
             $('.8.answer-correct').show()
     
         } else {
             console.log('wrong')
            $('.8.answer-incorrect').show()
         }
-        console.log(score)
+
         renderScore()
     })    
     //
@@ -451,7 +451,7 @@ function getResult() {
     $('.9').on('click', '.answer-button-on', function () {
         if ($(this).hasClass('correct-answer')) {
             score = score + 1
-            console.log('congrats')
+
             $('.9.answer-correct').show()
     
         } else {
