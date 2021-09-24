@@ -87,7 +87,7 @@ function render() {
                                 </tbody>
                             </table>
                             <p class="${index} answer-correct" style="display: none"><b>Correct!</b></p>
-                            <p class="${index} answer-incorrect" style="display: none"><b>Not quite! The correct answer was C) ${randomArray[0]}</b></p>
+                            <p class="${index} answer-incorrect" style="display: none"><b>Not quite! The correct answer was A) ${randomArray[0]}</b></p>
                             <a class="waves-effect waves-light btn next-button ${index}">Next Question</a>      
                         </div>
                     </div>`;                    
@@ -121,7 +121,7 @@ function render() {
                                 </tbody>
                             </table>
                             <p class="${index} answer-correct" style="display: none"><b>Correct!</b></p>
-                            <p class="${index} answer-incorrect" style="display: none"><b>Not quite! The correct answer was C) ${randomArray[1]}</b></p>
+                            <p class="${index} answer-incorrect" style="display: none"><b>Not quite! The correct answer was B) ${randomArray[1]}</b></p>
                             <a class="waves-effect waves-light btn next-button ${index}">Next Question</a>      
                         </div>
                     </div>`;
@@ -189,7 +189,7 @@ function render() {
                                 </tbody>
                             </table>
                             <p class="${index} answer-correct" style="display: none"><b>Correct!</b></p>
-                            <p class="${index} answer-incorrect" style="display: none"><b>Not quite! The correct answer was C) ${randomArray[3]}</b></p>
+                            <p class="${index} answer-incorrect" style="display: none"><b>Not quite! The correct answer was D) ${randomArray[3]}</b></p>
                             <a class="waves-effect waves-light btn next-button ${index}">Next Question</a>      
                         </div>
                     </div>`;
